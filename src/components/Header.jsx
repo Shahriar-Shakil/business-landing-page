@@ -21,8 +21,11 @@ function Header() {
           <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto  lg:items-center lg:w-auto lg:space-x-6">
             <li>
               <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scroll.scrollTo("#home");
+                }}
                 className="text-sm text-gray-400 hover:text-gray-500"
-                href="#home"
               >
                 Home
               </a>

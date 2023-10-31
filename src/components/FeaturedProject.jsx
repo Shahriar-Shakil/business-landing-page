@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const FeaturedProject = () => {
@@ -9,16 +10,13 @@ const FeaturedProject = () => {
             <div className="flex flex-wrap items-center -mx-4">
               <div className="mb-12 lg:mb-0 w-full lg:w-1/2 flex px-4">
                 <div className="max-w-md">
-                  <span className="text-green-600 font-bold">
-                    Dolor sit amet consectutar
-                  </span>
                   <h2 className="mb-6 text-4xl lg:text-5xl font-bold font-heading">
-                    Build &amp; Launch without problems
+                    ফুল স্ট্যাক ওয়েব ডেভেলপমেন্ট
                   </h2>
                   <div className="mb-6 max-w-sm">
                     <p className="text-gray-500 leading-loose">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Pellentesque efficitur nisl sodales egestas lobortis.
+                      ওয়েব ডেভেলপার হওয়ার স্বপ্ন এবার হবে পূরণ। সম্পূর্ণ ফ্রন্ট
+                      ও ব্যাক এন্ড ডেভেলপমেন্ট শেখা হবে শূন্য থেকেই
                     </p>
                   </div>
                   <div className="flex flex-wrap lg:-ml-5">

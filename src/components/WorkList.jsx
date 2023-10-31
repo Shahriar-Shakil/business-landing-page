@@ -2,7 +2,13 @@ import React from "react";
 
 const WorkList = () => {
   return (
-    <section id="workList">
+    <section
+      data-scroll
+      data-scroll-speed="1"
+      data-scroll-position="top"
+      data-scroll-direction="vertical"
+      id="workList"
+    >
       <div className="py-20 bg-gray-50 radius-for-skewed">
         <div className="container mx-auto px-4">
           <div className="mb-16 max-w-md mx-auto text-center">

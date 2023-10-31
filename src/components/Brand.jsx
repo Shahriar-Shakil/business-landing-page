@@ -39,7 +39,13 @@ export const settings = {
 const Brand = () => {
   return (
     <>
-      <section className="py-20">
+      <section
+        data-scroll
+        data-scroll-speed="1"
+        data-scroll-position="top"
+        data-scroll-direction="vertical"
+        className="py-20"
+      >
         <div className="container mx-auto px-4">
           <div className="">
             <Slider {...settings}>

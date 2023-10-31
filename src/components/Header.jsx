@@ -99,8 +99,11 @@ function Header() {
             </li>
             <li>
               <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scroll.scrollTo("#service");
+                }}
                 className="text-sm text-gray-400 hover:text-gray-500"
-                href="#service"
               >
                 Service
               </a>
@@ -124,16 +127,22 @@ function Header() {
             </li>
             <li>
               <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scroll.scrollTo("#testimonials");
+                }}
                 className="text-sm text-gray-400 hover:text-gray-500"
-                href="#testimonials"
               >
                 Testimonials
               </a>
             </li>
           </ul>
           <a
+            onClick={(e) => {
+              e.preventDefault();
+              scroll.scrollTo("#contacts");
+            }}
             className="hidden lg:inline-block py-4 px-6 bg-green-100 hover:bg-green-500 text-sm text-green-600 hover:text-white font-bold rounded-l-xl rounded-t-xl transition duration-200"
-            href="#contacts"
           >
             Contact Us
           </a>

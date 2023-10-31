@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+
+import Locomotive from "@/components/Locomotive";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {" "}
-        <Header />
-        {children}
-        <Footer />
+        <Locomotive>
+          <Header />
+          {children}
+          <Footer />
+        </Locomotive>
       </body>
     </html>
   );

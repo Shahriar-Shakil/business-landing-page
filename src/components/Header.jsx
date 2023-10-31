@@ -1,16 +1,13 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/framer-varients";
+
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 function Header() {
+  const { scroll } = useLocomotiveScroll();
+
   return (
-    <motion.section
-      variants={fadeIn("down")}
-      initial="initial"
-      animate="animate"
-      className="relative bg-white "
-    >
+    <section className="relative bg-white ">
       <div className="container mx-auto">
         <nav className="relative px-6 py-6 flex justify-between items-center z-10">
           <Link className="text-3xl font-bold leading-none" href="/">
@@ -49,7 +46,10 @@ function Header() {
             <li>
               <a
                 className="text-sm text-gray-400 hover:text-gray-500"
-                href="#workList"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scroll.scrollTo("#workList");
+                }}
               >
                 Work List
               </a>
@@ -72,8 +72,11 @@ function Header() {
             </li>
             <li>
               <a
-                className="text-sm text-green-600 font-bold"
-                href="#FeaturedProject"
+                className="text-sm text-gray-400 hover:text-gray-500"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scroll.scrollTo("#FeaturedProject");
+                }}
               >
                 Featured Project
               </a>
@@ -136,7 +139,7 @@ function Header() {
           </a>
         </nav>
       </div>
-    </motion.section>
+    </section>
   );
 }
 

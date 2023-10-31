@@ -11,7 +11,13 @@ export default function HeroList() {
             <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0 flex items-center">
               <div className="w-full text-center lg:text-left">
                 <div className="max-w-md mx-auto lg:mx-0">
-                  <h2 className="mb-3 text-4xl lg:text-5xl font-bold font-heading">
+                  <h2
+                    data-scroll
+                    data-scroll-speed="2"
+                    data-scroll-position="top"
+                    data-scroll-direction="horizontal"
+                    className="mb-3 text-4xl lg:text-5xl font-bold font-heading"
+                  >
                     <span>Enhance Your</span>
                     <span className="text-green-600">Learning</span>
                   </h2>
@@ -45,7 +51,13 @@ export default function HeroList() {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 px-4">
+            <div
+              data-scroll
+              data-scroll-speed="2"
+              data-scroll-position="top"
+              data-scroll-direction="vertical"
+              className="w-full lg:w-1/2 px-4"
+            >
               <div className="flex flex-wrap lg:mb-4 lg:ml-6">
                 <motion.img
                   whileHover={{

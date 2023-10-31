@@ -3,7 +3,7 @@ import React from "react";
 function AllService() {
   return (
     <>
-      <section>
+      <section id="service">
         <div className="py-20 bg-gray-50 radius-for-skewed">
           <div className="container px-4 mx-auto">
             <div className="mb-16 flex flex-wrap justify-center md:justify-between items-center">

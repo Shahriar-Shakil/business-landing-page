@@ -1,5 +1,28 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+import { staggerForFooterMenu } from "@/utils/framer-varients";
 
+const products = [
+  { text: "Services", link: "#" },
+  { text: "About Us", link: "#" },
+  { text: "News and Stories", link: "#" },
+  { text: "Roadmap", link: "#" },
+];
+const importantLinks = [
+  { text: "Organization Team", link: "#" },
+  { text: "Our Journeys", link: "#" },
+  { text: "Pricing Plans", link: "#" },
+  { text: "Roadmap", link: "#" },
+  { text: "Terms & Conditions", link: "#" },
+  { text: "Privacy Policy", link: "#" },
+];
+const company = [
+  { text: "About Us", link: "#" },
+  { text: "Jobs", link: "#" },
+  { text: "Press", link: "#" },
+  { text: "Contact Us", link: "#" },
+];
 const Footer = () => {
   return (
     <>
@@ -57,86 +80,94 @@ const Footer = () => {
                 <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
                   <h3 className="mb-6 text-2xl font-bold">Products</h3>
                   <ul>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Services
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        About Us
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        News and Stories
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Roadmap
-                      </a>
-                    </li>
+                    {" "}
+                    {products.map((item, index) => (
+                      <motion.li
+                        variants={staggerForFooterMenu(index)}
+                        initial="initial"
+                        whileInView="whileInView"
+                        viewport={{ once: false }}
+                        whileHover={{
+                          scale: 1.1,
+                          originX: 0,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                        }}
+                        key={index}
+                        className={index < products.length - 1 ? "mb-4" : ""}
+                      >
+                        <a
+                          className="text-gray-800 hover:text-gray-600"
+                          href={item.link}
+                        >
+                          {item.text}
+                        </a>
+                      </motion.li>
+                    ))}
                   </ul>
                 </div>
                 <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
                   <h3 className="mb-6 text-2xl font-bold">Important Links</h3>
                   <ul>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Organization Team
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Our Journeys
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Pricing Plans
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Roadmap
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Terms &amp; Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Privacy Policy
-                      </a>
-                    </li>
+                    {importantLinks.map((item, index) => (
+                      <motion.li
+                        variants={staggerForFooterMenu(index)}
+                        initial="initial"
+                        whileInView="whileInView"
+                        viewport={{ once: false }}
+                        whileHover={{
+                          scale: 1.1,
+                          originX: 0,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                        }}
+                        key={index}
+                        className={
+                          index < importantLinks.length - 1 ? "mb-4" : ""
+                        }
+                      >
+                        <a
+                          className="text-gray-800 hover:text-gray-600"
+                          href={item.link}
+                        >
+                          {item.text}
+                        </a>
+                      </motion.li>
+                    ))}
                   </ul>
                 </div>
                 <div className="w-full md:w-1/3 lg:w-auto">
                   <h3 className="mb-6 text-2xl font-bold">Company</h3>
                   <ul>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        About Us
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Jobs
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Press
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-800 hover:text-gray-600" href="#">
-                        Contact Us
-                      </a>
-                    </li>
+                    {company.map((item, index) => (
+                      <motion.li
+                        variants={staggerForFooterMenu(index)}
+                        initial="initial"
+                        whileInView="whileInView"
+                        viewport={{ once: false }}
+                        whileHover={{
+                          scale: 1.1,
+                          originX: 0,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                        }}
+                        key={index}
+                        className={index < company.length - 1 ? "mb-4" : ""}
+                      >
+                        <a
+                          className="text-gray-800 hover:text-gray-600"
+                          href={item.link}
+                        >
+                          {item.text}
+                        </a>
+                      </motion.li>
+                    ))}
                   </ul>
                 </div>
               </div>

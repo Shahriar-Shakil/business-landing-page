@@ -3,7 +3,7 @@ import React from "react";
 const FeaturedProject = () => {
   return (
     <>
-      <section>
+      <section id="FeaturedProject">
         <div className="py-20 bg-gray-50 radius-for-skewed">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center -mx-4">
